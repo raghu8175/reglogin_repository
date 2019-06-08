@@ -1,0 +1,37 @@
+{% extends 'base1.html' %}
+{% load static %}
+<html>
+<head>
+    <title>Ourteam Page</title>
+</head>
+<body>
+{% block content %}
+  <div class="team">
+    <h1>Our Team</h1>
+  <span class="sp1"></span>
+  <div class="pics">
+      <a href="#"> <img src="{% static 'images/my3.jpg' %}" style="width: 350px;height: 350px"></a>
+      <a href="#"> <img src="{% static 'images/my4.jpg' %}" style="width: 350px;height: 350px"></a>
+      <a href="#"> <img src="{% static 'images/my2.jpg' %}" style="width: 350px;height: 350px"></a>
+  </div>
+
+  <div class="section" id="p1">
+      <h1>Ronaldo</h1>
+      <span class="sp1"></span>
+      <p>The Footballer</p>
+  </div>
+  <div class="section" id="p1">
+      <h1>Ronaldo</h1>
+      <span class="sp1"></span>
+      <p>The Footballer</p>
+  </div>
+  <div class="section" id="p1">
+      <h1>Ronaldo</h1>
+      <span class="sp1"></span>
+      <p>The Footballer</p>
+  </div>
+
+  </div>
+{% endblock %}
+</body>
+</html>

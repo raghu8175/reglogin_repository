@@ -1,0 +1,31 @@
+{% extends 'base1.html' %}
+<html>
+<head>
+    <title>Contact Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    ul{
+        margin-top: -10px;
+    }
+    li{
+        list-style-type: none;
+        margin-top: -7px;
+    }
+    </style>
+  <div class="container">
+  <div class="row">
+      <div class="offset-md-3 col-md-6">
+          <form method="post">
+              {% csrf_token %}
+              {{ cform }}<br>
+              <input type="submit" value="send">
+              <input type="reset" value="clear">
+          </form>
+      </div>
+  </div>
+  </div>
+{% endblock %}
+</body>
+</html>

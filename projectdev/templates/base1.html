@@ -1,0 +1,97 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Base page</title>
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <script type="text/javascript" src="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+
+</head>
+<style>
+    #name1{
+        font-size:30px;
+        color: red;
+        font-family: cursive;
+        text-shadow: 2px 2px blueviolet;
+    }
+    #ul1{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: black;
+    }
+    li a{
+        float: left;
+    }
+    li a{
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 15px 20px;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .active{
+        background-color: green;
+    }
+    li a:hover{
+        background-color: orange;
+        color: black;
+    }
+    .footer{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: black;
+        color: white;
+        text-align: center;
+    }
+    #h11{
+        font-size: 50px;
+        text-shadow: 3px 3px 3px red;
+        margin: -10px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+        font-family: "Tempus Sans ITC";
+    }
+
+    #h12{
+        font-size: 20px;
+        text-shadow: 3px 3px 3px red;
+        margin: -10px;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    body{
+        background-color:cyan ;
+    }
+</style>
+
+<body>
+<ul id="ul1">
+    <li><a href="/home/" class="active">Home</a></li>
+    <li><a href="/contact/">Contact</a></li>
+    <li><a href="/courses/">Courses</a></li>
+    <li><a href="/feedback/">Feedback</a></li>
+    <li><a href="/ourteam/">Our Team</a></li>
+    <li><a href="/gallery/">Gallery</a></li>
+</ul>
+<marquee><h1 id="h11">This is DjangoSoft</h1></marquee>
+{% block content %}
+{% endblock %}
+<footer class="footer">
+    <h3 id="h12">Thanks You All</h3>
+</footer>
+
+</body>
+
+
+</html>

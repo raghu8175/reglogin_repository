@@ -1,0 +1,75 @@
+{% extends 'base1.html' %}
+<html>
+<head>
+    <title>Course Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    table{
+        width: 100%;
+        text-align: center;
+    }
+    td,th{
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    tbody:nth-of-type(odd){
+        background-color: cyan;
+        color: black;
+    }
+    tbody:nth-of-type(even){
+        background-color: beige;
+        color: black;
+    }
+    thead{
+        background-color: blueviolet;
+        color: black;
+    }
+    body{
+        background-color: red;
+    }
+    </style>
+  <div class="container">
+  <div class="row">
+      <div class="col-md-12">
+
+          {%  if courses %}
+              <center><h1>Available Courses Are</h1></center>
+              <table border="2">
+              <thead>
+              <tr>
+                  <th>Course ID</th>
+                  <th>Course Name</th>
+                  <th>Course Duration</th>
+                  <th>Course Fee</th>
+                  <th>Start date</th>
+                  <th>Start Time</th>
+                  <th>Trainer Name</th>
+                  <th>Trainer Expeience</th>
+              </tr>
+              </thead>
+              {% for i in courses %}
+                  <tbody>
+                  <tr>
+                      <td>{{ i.course_id }}</td>
+                      <td>{{ i.course_name }}</td>
+                      <td>{{ i.course_dur }}</td>
+                      <td>{{ i.course_fee }}</td>
+                      <td>{{ i.start_date }}</td>
+                      <td>{{ i.start_time }}</td>
+                      <td>{{ i.trainer_name }}</td>
+                      <td>{{ i.trainer_exp }}</td>
+                  </tr>
+                  </tbody>
+              {% endfor %}
+              </table>
+              {% else %}
+              <h3>No Courses Available</h3>
+          {% endif %}
+      </div>
+  </div>
+  </div>
+{% endblock %}
+</body>
+</html>
